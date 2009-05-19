@@ -1,0 +1,28 @@
+<h1>Listing entries</h1>
+
+<table>
+  <tr>
+    <th>Nickname</th>
+    <th>Email</th>
+    <th>Comment</th>
+    <th>Entered at</th>
+    <th>Present</th>
+  </tr>
+
+<% @entries.each do |entry| %>
+  <tr>
+    <td><%=h entry.nickname %></td>
+    <td><%=h entry.email %></td>
+    <td><%=h entry.comment %></td>
+    <td><%=h entry.entered_at %></td>
+    <td><%=h entry.present %></td>
+    <td><%= link_to 'Show', entry %></td>
+    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+    <td><%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New entry', new_entry_path %>

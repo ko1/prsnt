@@ -1,0 +1,28 @@
+<p>
+  <b>Nickname:</b>
+  <%=h @entry.nickname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @entry.email %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @entry.comment %>
+</p>
+
+<p>
+  <b>Entered at:</b>
+  <%=h @entry.entered_at %>
+</p>
+
+<p>
+  <b>Present:</b>
+  <%=h @entry.present %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
