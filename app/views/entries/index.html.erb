@@ -15,7 +15,7 @@
     <td><%=h entry.email %></td>
     <td><%=h entry.comment %></td>
     <td><%=h entry.entered_at %></td>
-    <td><%=h entry.present %></td>
+    <td><%=h entry.present.name %></td>
     <td><%= link_to 'Show', entry %></td>
     <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
     <td><%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %></td>

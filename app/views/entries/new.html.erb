@@ -20,8 +20,8 @@
     <%= f.datetime_select :entered_at %>
   </p>
   <p>
-    <%= f.label :present %><br />
-    <%= f.text_field :present %>
+    <%= f.label :present_id %><br />
+    <%= f.select :present_id, Present.all.map {|p| [p.name, p.id]} %>
   </p>
   <p>
     <%= f.submit 'Create' %>
