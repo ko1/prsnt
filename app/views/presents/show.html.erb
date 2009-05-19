@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @present.name %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%=h @present.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_present_path(@present) %> |
+<%= link_to 'Back', presents_path %>
